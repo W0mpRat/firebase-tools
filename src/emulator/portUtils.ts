@@ -139,7 +139,7 @@ export async function checkPortOpen(port: number, host: string): Promise<boolean
  */
 export async function waitForPortClosed(port: number, host: string): Promise<void> {
   const interval = 250;
-  const timeout = 60000;
+  const timeout = 600000;
   try {
     await tcpport.waitUntilUsedOnHost(port, host, interval, timeout);
   } catch (e) {
